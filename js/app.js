@@ -49,7 +49,7 @@ Write a function called sumAndMultiply() that takes in three numbers as separate
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourcaeful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
@@ -81,13 +81,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4];
+let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+function sumArray(sumArr) { 
   let arrSum = sum(sumArr[0],sumArr[1])[0];
   let arrSum2 = sum(arrSum, sumArr[2])[0];
   let arrString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrSum2} is their sum.`;
-  return [arrSum2,arrString]
+  return [arrSum2,arrString];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -107,12 +107,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+function multiplyArray(multArr) { 
+  let arrProd = multiply(multArr[0],multArr[1])[0];
+  let arrProd2 = multiply(arrProd, multArr[2])[0];
+  let prodString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${arrProd2}.`;
+  return [arrProd2,prodString];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
